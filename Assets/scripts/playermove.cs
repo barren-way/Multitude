@@ -94,6 +94,8 @@ public class playermove : MonoBehaviour
             rb.velocity=new Vector2(rb.velocity.x,jumpforce);
             jumpCount--;
             jumpPress=false;
+            anima.SetBool("jumping",true);
+            jumpAudio.Play();
         }
         else if(jumpPress&&jumpCount>0&&isJump)
         {
@@ -107,7 +109,7 @@ public class playermove : MonoBehaviour
     void SwitchAnim()
     {
         anima.SetBool("idle",false);
-        if(rb.velocity.y<0.1f && !coll.IsTouchingLayers(ground))
+        if(rb.velocity.y<-1.1f && !coll.IsTouchingLayers(ground))
         {
             anima.SetBool("jumping",false);
             anima.SetBool("falling",true);

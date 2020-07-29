@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2BA6CCD2-49B1-22D2-3D63-A1CA55424270}</ProjectGuid>
+    <ProjectGuid>{9A5894E7-92B2-BCFA-10B4-4EADBA25397E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,43 +63,43 @@
      <Compile Include="Assets\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
      <None Include="Assets\CasualGameBGM05\ReadMe.txt" />
  <Reference Include="Cinemachine">
- <HintPath>E:/unitygame/fox/fox/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ <HintPath>E:/Multitude/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
  <Reference Include="Unity.DocZh.Editor">
- <HintPath>E:/unitygame/fox/fox/Library/ScriptAssemblies/Unity.DocZh.Editor.dll</HintPath>
+ <HintPath>E:/Multitude/Library/ScriptAssemblies/Unity.DocZh.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.UIWidgets.Editor">
- <HintPath>E:/unitygame/fox/fox/Library/ScriptAssemblies/Unity.UIWidgets.Editor.dll</HintPath>
+ <HintPath>E:/Multitude/Library/ScriptAssemblies/Unity.UIWidgets.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>E:/unitygame/fox/fox/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>E:/Multitude/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.UIWidgets">
- <HintPath>E:/unitygame/fox/fox/Library/ScriptAssemblies/Unity.UIWidgets.dll</HintPath>
+ <HintPath>E:/Multitude/Library/ScriptAssemblies/Unity.UIWidgets.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>E:/unitygame/fox/fox/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>E:/Multitude/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>E:/unitygame/fox/fox/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>E:/Multitude/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Messenger.Editor">
- <HintPath>E:/unitygame/fox/fox/Library/ScriptAssemblies/Unity.Messenger.Editor.dll</HintPath>
+ <HintPath>E:/Multitude/Library/ScriptAssemblies/Unity.Messenger.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEditorBridge.023">
- <HintPath>E:/unitygame/fox/fox/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.023.dll</HintPath>
+ <HintPath>E:/Multitude/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.023.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.cinemachine.editor">
- <HintPath>E:/unitygame/fox/fox/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ <HintPath>E:/Multitude/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>E:/unitygame/fox/fox/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>E:/Multitude/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>E:/unitygame/fox/fox/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>E:/Multitude/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEngineBridge.024">
- <HintPath>E:/unitygame/fox/fox/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.024.dll</HintPath>
+ <HintPath>E:/Multitude/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.024.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -303,13 +303,13 @@
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>E:/unitygame/fox/fox/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>E:/Multitude/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>E:/unitygame/fox/fox/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>E:/Multitude/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>E:/unitygame/fox/fox/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>E:/Multitude/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>D:/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
