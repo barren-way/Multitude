@@ -41,14 +41,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: ground
+    uniqueID: 249731725
+    locked: 0
   - name: background
     uniqueID: 1878904363
     locked: 0
   - name: environment
     uniqueID: 2075054247
-    locked: 0
-  - name: ground
-    uniqueID: 249731725
     locked: 0
   - name: player
     uniqueID: 3579143555
