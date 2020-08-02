@@ -2157,6 +2157,8 @@ GameObject:
   m_Component:
   - component: {fileID: 983586378}
   - component: {fileID: 983586377}
+  - component: {fileID: 983586380}
+  - component: {fileID: 983586379}
   m_Layer: 0
   m_Name: timbo
   m_TagString: Untagged
@@ -2198,8 +2200,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2075054247
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: baa5e81b22de0fb4e9a5ce725416f969, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2226,6 +2228,46 @@ Transform:
   m_Father: {fileID: 660090904}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &983586379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983586376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e78fa3e95388ffc41a1ff2dc3ba10aef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbspeed: 2
+  platf: {fileID: 983586380}
+--- !u!61 &983586380
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983586376}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.20729733, y: 0.88011074}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 25.740002}
+    newSize: {x: 2, y: 25.740002}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.59565735, y: 22.261263}
+  m_EdgeRadius: 0
 --- !u!1 &1184976749
 GameObject:
   m_ObjectHideFlags: 0
@@ -2956,8 +2998,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2075054247
-  m_SortingLayer: -3
+  m_SortingLayerID: 1878904363
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6c77198dbc073de47844e124a4f149db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3107,12 +3149,12 @@ PrefabInstance:
     - target: {fileID: 3543462228983145083, guid: bc55e072a10571a4fb2f0ce694272302,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.25
+      value: 7.65
       objectReference: {fileID: 0}
     - target: {fileID: 3543462228983145083, guid: bc55e072a10571a4fb2f0ce694272302,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.78
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 3543462228983145083, guid: bc55e072a10571a4fb2f0ce694272302,
         type: 3}
