@@ -18,7 +18,8 @@ GameObject:
   - component: {fileID: 3543462229285949645}
   - component: {fileID: 3543462229285949682}
   - component: {fileID: 3543462229285949685}
-  m_Layer: 0
+  - component: {fileID: 1645987582}
+  m_Layer: 9
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -141,7 +142,7 @@ MonoBehaviour:
   jumpAudio: {fileID: 3543462229285949682}
   deadAudio: {fileID: 3543462229285949685}
   speed: 5
-  jumpforce: 7.5
+  jumpforce: 5
   ground:
     serializedVersion: 2
     m_Bits: 256
@@ -199,10 +200,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 475f4837af487ce4a9e68bb227455e4c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fcb27d21e7a5f374fb94ee012f582059, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.05
-  m_Pitch: 0.85
+  m_Volume: 0.95
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -477,6 +478,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1645987582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543462229285949642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d74d9c84ff1bb44a50731a6a73375c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3543462229541720904
 GameObject:
   m_ObjectHideFlags: 0
