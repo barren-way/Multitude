@@ -64,7 +64,7 @@ public class Case : MonoBehaviour
             rb.gravityScale = 0;
         }
         else if (!isPull || !isTouchCase)
-            rb.gravityScale = 1;
+            rb.gravityScale = 500;
     }
 
     RaycastHit2D Raycast(Vector2 offset, Vector2 rayDirection, float length, LayerMask layer)

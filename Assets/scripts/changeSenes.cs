@@ -8,11 +8,11 @@ public class changeSenes : MonoBehaviour
 
     void Awake()
     {
+        DontDestroyOnLoad (gameObject);
         if(SceneManager.GetActiveScene().name=="start")
         {
-            DontDestroyOnLoad (gameObject);
+            
             SceneManager.LoadScene(0);
-
         }
 
         
