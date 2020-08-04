@@ -11,7 +11,10 @@ public class Case : MonoBehaviour
      public bool isPull;
      public bool isTouchCase;
      public Vector3 PlayerPosition;
+     public Vector3 PlayerLocalScale;
+     public float Direction;
      public GameObject Player;
+     private Rigidbody2D rb;
 
      [Header("碰撞判断")]
      public float CaseOffsetX = 0.6f;
@@ -20,13 +23,16 @@ public class Case : MonoBehaviour
      public LayerMask groundLayer;
     void Start()
     {
-         
+         rb=GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         PlayerPosition = Player.GetComponent<playermove>().transform.position;
+        PlayerLocalScale = Player.GetComponent<playermove>().transform.localScale;
+
+        Direction = Player.GetComponent<playermove>().direction;
         Vector2 OffsetR = new Vector2(CaseOffsetX, CaseOffsetY);
         Vector2 OffsetL = new Vector2(CaseOffsetX*-1, CaseOffsetY);
         RaycastHit2D RightCheck = Raycast(OffsetR, Vector2.right, length, groundLayer);
@@ -35,6 +41,10 @@ public class Case : MonoBehaviour
         if(Input.GetButton("Pull"))
         {
             isPull = true;
+        }
+        else
+        {
+            isPull = false;
         }
 
         if(LeftCheck || RightCheck)
@@ -46,8 +56,15 @@ public class Case : MonoBehaviour
             isTouchCase = false;
         }
         //transform.position = Vector3.MoveTowards(transform.position, PlayerPosition, 0.01f);
+   
+
         if (isPull && isTouchCase)
-            transform.position = PlayerPosition +  new Vector3(1.2f,0f,0f);
+        {
+            transform.position = PlayerPosition +  new Vector3(1f * PlayerLocalScale.x,0f,0f);
+            rb.gravityScale = 0;
+        }
+        else if (!isPull || !isTouchCase)
+            rb.gravityScale = 1;
     }
 
     RaycastHit2D Raycast(Vector2 offset, Vector2 rayDirection, float length, LayerMask layer)

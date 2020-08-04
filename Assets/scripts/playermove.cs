@@ -14,6 +14,7 @@ public class playermove : MonoBehaviour
 
     public float speed=10f;
     public float jumpforce;
+    public float direction;
     
     public LayerMask ground;
     public Collider2D coll;
@@ -62,6 +63,7 @@ public class playermove : MonoBehaviour
     {
         float horizontalmove=Input.GetAxisRaw("Horizontal");
         float facedircetion = Input.GetAxisRaw("Horizontal");
+        direction = facedircetion;
         rb.velocity = new Vector2(horizontalmove*speed,rb.velocity.y);
         anima.SetFloat("running",Mathf.Abs(facedircetion));
         //角色移动
