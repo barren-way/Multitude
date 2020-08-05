@@ -61,6 +61,8 @@ public class robot : enemy
     {
         if(collider.gameObject.tag=="Player")
         {
+            transform.localScale = new Vector3(-1,1,1);
+            faceright=false;
             anim.SetBool("fight",true);           
         }
     }

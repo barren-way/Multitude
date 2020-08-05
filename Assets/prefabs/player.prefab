@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 3543462229285949682}
   - component: {fileID: 3543462229285949685}
   - component: {fileID: 1645987582}
+  - component: {fileID: 1645987593}
   m_Layer: 9
   m_Name: player
   m_TagString: Player
@@ -35,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 3543462229285949642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -21.98, y: -3.99, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1173742, y: 0.888986, z: 1}
   m_Children:
   - {fileID: 3543462229541720907}
   - {fileID: 3543462230533657873}
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: -715823741
   m_SortingLayer: -2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 72de0c64f2c6a498096698322c976a67, type: 3}
+  m_Sprite: {fileID: 21300054, guid: 4b64ae7d3cf5bbd44ae27eb251205b9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,9 +125,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.020998001, y: -0.5656557}
+  m_Offset: {x: -0.19529523, y: -1.3630048}
   serializedVersion: 2
-  m_Radius: 0.36930656
+  m_Radius: 0.27799088
 --- !u!114 &3543462229285949646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,8 +142,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpAudio: {fileID: 3543462229285949682}
   deadAudio: {fileID: 3543462229285949685}
-  speed: 5
+  speed: 3
   jumpforce: 5
+  direction: 0
   ground:
     serializedVersion: 2
     m_Bits: 256
@@ -153,7 +155,7 @@ MonoBehaviour:
   cherryNum: {fileID: 0}
   isHurt: 0
   groundCheck: {fileID: 3543462230533657873}
-  isGround: 0
+  isGround: 1
   isJump: 0
 --- !u!95 &3543462229285949647
 Animator:
@@ -187,8 +189,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01673603, y: -0.31617236}
-  m_Size: {x: 0.7959614, y: 1.114686}
+  m_Offset: {x: -0.19490348, y: -0.33714744}
+  m_Size: {x: 0.5681193, y: 2.3404067}
   m_Direction: 0
 --- !u!82 &3543462229285949645
 AudioSource:
@@ -490,6 +492,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d74d9c84ff1bb44a50731a6a73375c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &1645987593
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543462229285949642}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 6c868a0969dfd2e45b5688f1be4a59d7, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.08354274, y: 1.1066198}
+  serializedVersion: 2
+  m_Radius: 0.29987377
 --- !u!1 &3543462229541720904
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,7 +562,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3543462230533658094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11, y: -0.898, z: 0}
+  m_LocalPosition: {x: -0.17, y: -1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3543462228983145083}
