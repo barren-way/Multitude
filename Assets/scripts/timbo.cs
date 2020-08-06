@@ -7,6 +7,7 @@ public class timbo : MonoBehaviour
     public float climbspeed = 2f;
     private bool inLadder;
     public Collider2D platf;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -24,14 +25,14 @@ public class timbo : MonoBehaviour
         if(collider.tag =="Player")
         {
             //向上爬
-            if(Input.GetKey(KeyCode.UpArrow))
+            if(Input.GetButton("Jump"))
             {
                 inLadder=true;
                 collider.GetComponent<Rigidbody2D>().gravityScale=0;
                 collider.GetComponent<Rigidbody2D>().velocity =new Vector2(0,climbspeed);
             }
             //向下爬
-            else if (Input.GetKey(KeyCode.DownArrow))
+            else if (Input.GetButton("Crouch"))
             {
                 inLadder=true;
                 collider.GetComponent<Rigidbody2D>().gravityScale=0;

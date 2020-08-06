@@ -21,6 +21,8 @@ public class Case : MonoBehaviour
      public float CaseOffsetY = 0f;
      public float length = 1f;
      public LayerMask groundLayer;
+     public GameObject Dialog;
+     private bool showDialog=false;
     void Start()
     {
          rb=GetComponent<Rigidbody2D>();
@@ -51,9 +53,18 @@ public class Case : MonoBehaviour
         {
             isTouchCase = true;
             Player.GetComponent<playermove>().isTouchCase = true;
+            if(!showDialog)
+            {
+                Dialog.SetActive(true);
+            }
+            else
+            {
+                Destroy(Dialog);
+            }
         }
         else
         {
+            Dialog.SetActive(false);
             isTouchCase = false;
             Player.GetComponent<playermove>().isTouchCase = false;
         }
@@ -62,12 +73,15 @@ public class Case : MonoBehaviour
 
         if (isPull && isTouchCase)
         {
+            showDialog=true;
             transform.position = PlayerPosition +  new Vector3(1.2f * PlayerLocalScale.x,0f,0f);
             rb.gravityScale = 0;
         }
         else if (!isPull || !isTouchCase)
             rb.gravityScale = 500;
     }
+
+    
 
     RaycastHit2D Raycast(Vector2 offset, Vector2 rayDirection, float length, LayerMask layer)
     {

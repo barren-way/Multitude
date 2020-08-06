@@ -23,11 +23,17 @@ public class fall : MonoBehaviour
     {
         if(collider.tag=="Player")
         {
+            
             timboCollider.enabled=false;
-            player.GetComponent<Rigidbody2D>().gravityScale=1;
+            Invoke(nameof(fallDown),0.5f);
             Invoke(nameof(destoryTimbo),1.5f);
             
         }
+    }
+
+    void fallDown()
+    {
+        player.GetComponent<Rigidbody2D>().gravityScale=1;
     }
 
     void destoryTimbo ()
