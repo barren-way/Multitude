@@ -93,7 +93,7 @@ public class playermove : MonoBehaviour
     {
         if(isGround)
         {
-            jumpCount=1;
+            jumpCount=2;
             isJump=false;
         }
         if(jumpPress&&isGround)
