@@ -19,7 +19,7 @@ public class Case : MonoBehaviour
      [Header("碰撞判断")]
      public float CaseOffsetX = 0.6f;
      public float CaseOffsetY = 0f;
-     public float length = 0.5f;
+     public float length = 1f;
      public LayerMask groundLayer;
     void Start()
     {
@@ -50,17 +50,19 @@ public class Case : MonoBehaviour
         if(LeftCheck || RightCheck)
         {
             isTouchCase = true;
+            Player.GetComponent<playermove>().isTouchCase = true;
         }
         else
         {
             isTouchCase = false;
+            Player.GetComponent<playermove>().isTouchCase = false;
         }
         //transform.position = Vector3.MoveTowards(transform.position, PlayerPosition, 0.01f);
    
 
         if (isPull && isTouchCase)
         {
-            transform.position = PlayerPosition +  new Vector3(1f * PlayerLocalScale.x,0f,0f);
+            transform.position = PlayerPosition +  new Vector3(1.2f * PlayerLocalScale.x,0f,0f);
             rb.gravityScale = 0;
         }
         else if (!isPull || !isTouchCase)

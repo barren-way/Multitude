@@ -10,6 +10,11 @@ public class playermove : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anima;
     public AudioSource jumpAudio,deadAudio;
+    public GameObject Case;
+    public bool IsPush;
+    public bool isTouchCase;
+   
+
 
 
     public float speed=10f;
@@ -55,6 +60,7 @@ public class playermove : MonoBehaviour
             isGround=Physics2D.OverlapCircle(groundCheck.position,0.1f,ground);
             Movement();
             jump();
+            Push();
         }   
         SwitchAnim();
     }
@@ -140,6 +146,21 @@ public class playermove : MonoBehaviour
             anima.SetBool("falling",false);
             anima.SetBool("idle",true);
         }
+    }
+    void Push()
+    {
+        
+        if(Input.GetButton("Pull") && isTouchCase)
+        {
+            IsPush = true;
+            anima.SetBool("push",true);
+        }
+        else
+        {
+            IsPush = false;
+            anima.SetBool("push",false);
+        }
+
     }
 
     //收集物品
