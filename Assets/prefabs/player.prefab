@@ -125,9 +125,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.19529523, y: -1.3630048}
+  m_Offset: {x: -0.19130562, y: -0.8982382}
   serializedVersion: 2
-  m_Radius: 0.27799088
+  m_Radius: 0.28561613
 --- !u!114 &3543462229285949646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +142,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpAudio: {fileID: 3543462229285949682}
   deadAudio: {fileID: 3543462229285949685}
+  Case: {fileID: 0}
+  IsPush: 0
+  isTouchCase: 0
   speed: 3
   jumpforce: 5
   direction: 0
@@ -189,8 +192,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.19490348, y: -0.33714744}
-  m_Size: {x: 0.5681193, y: 2.3404067}
+  m_Offset: {x: -0.19811006, y: -0.14765717}
+  m_Size: {x: 0.44627252, y: 1.9614252}
   m_Direction: 0
 --- !u!82 &3543462229285949645
 AudioSource:
@@ -199,7 +202,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3543462229285949642}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fcb27d21e7a5f374fb94ee012f582059, type: 3}
@@ -562,7 +565,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3543462230533658094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.17, y: -1.6, z: 0}
+  m_LocalPosition: {x: -0.17, y: -1.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3543462228983145083}

@@ -117,7 +117,7 @@ public class playermove : MonoBehaviour
     void SwitchAnim()
     {
         anima.SetBool("idle",false);
-        if(rb.velocity.y<-0.1f && !coll.IsTouchingLayers(ground))
+        if(rb.velocity.y<-0.5f && !coll.IsTouchingLayers(ground))
         {
             anima.SetBool("jumping",false);
             anima.SetBool("falling",true);
