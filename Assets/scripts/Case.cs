@@ -9,7 +9,7 @@ public class Case : MonoBehaviour
 {
     // Start is called before the first frame update
      public bool isPull;
-     public bool isTouchCase;
+     private bool TouchCase;
      public Vector3 PlayerPosition;
      public Vector3 PlayerLocalScale;
      public float Direction;
@@ -23,9 +23,10 @@ public class Case : MonoBehaviour
      public LayerMask groundLayer;
      public GameObject Dialog;
      private bool showDialog=false;
+     public  bool Flag = false;
     void Start()
     {
-         rb=GetComponent<Rigidbody2D>();
+         rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -49,9 +50,11 @@ public class Case : MonoBehaviour
             isPull = false;
         }
 
-        if(LeftCheck || RightCheck)
+        if((LeftCheck || RightCheck) && !Flag)
         {
-            isTouchCase = true;
+
+            TouchCase = true;
+            Flag = true;
             Player.GetComponent<playermove>().isTouchCase = true;
             if(!showDialog)
             {
@@ -62,22 +65,23 @@ public class Case : MonoBehaviour
                 Destroy(Dialog);
             }
         }
-        else
+        else if((!LeftCheck && !RightCheck) && Flag)
         {
-            Dialog.SetActive(false);
-            isTouchCase = false;
-            Player.GetComponent<playermove>().isTouchCase = false;
+            Flag = false;
+            TouchCase = false;
+            Player.GetComponent<playermove>().isTouchCase = false;  
+            Dialog.SetActive(false);         
         }
         //transform.position = Vector3.MoveTowards(transform.position, PlayerPosition, 0.01f);
    
 
-        if (isPull && isTouchCase)
+        if (isPull && TouchCase)
         {
             showDialog=true;
             transform.position = PlayerPosition +  new Vector3(1.2f * PlayerLocalScale.x,0f,0f);
             rb.gravityScale = 0;
         }
-        else if (!isPull || !isTouchCase)
+        else if (!isPull || !TouchCase)
             rb.gravityScale = 500;
     }
 
