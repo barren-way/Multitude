@@ -70,6 +70,7 @@
      <Compile Include="Assets\Addons\Tilemap\Tiles\Weighted Random Tile\WeightedRandomTile.cs" />
      <Compile Include="Assets\scripts\cameraMove.cs" />
      <Compile Include="Assets\scripts\Case.cs" />
+     <Compile Include="Assets\scripts\changeGround.cs" />
      <Compile Include="Assets\scripts\changeSenes.cs" />
      <Compile Include="Assets\scripts\clue.cs" />
      <Compile Include="Assets\scripts\eagle.cs" />
