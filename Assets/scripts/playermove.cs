@@ -22,6 +22,7 @@ public class playermove : MonoBehaviour
     public float direction;
     
     public LayerMask ground;
+    public LayerMask project;
     public Collider2D coll;
     public Collider2D disColl; 
     public Transform ceilingCheck;
@@ -33,6 +34,7 @@ public class playermove : MonoBehaviour
     public bool isGround,isJump;
     bool jumpPress;
     int jumpCount;
+    public float fallSpeed;
 
 
     
@@ -57,7 +59,7 @@ public class playermove : MonoBehaviour
     {
         if (!isHurt)
         {
-            isGround=Physics2D.OverlapCircle(groundCheck.position,0.1f,ground);
+            isGround=Physics2D.OverlapCircle(groundCheck.position,0.1f,ground)||Physics2D.OverlapCircle(groundCheck.position,0.1f,project);
             Movement();
             jump();
             Push();
@@ -72,6 +74,7 @@ public class playermove : MonoBehaviour
         direction = facedircetion;
         rb.velocity = new Vector2(horizontalmove*speed,rb.velocity.y);
         anima.SetFloat("running",Mathf.Abs(facedircetion));
+        
         //角色移动
 
         if (facedircetion!=0)
@@ -93,8 +96,12 @@ public class playermove : MonoBehaviour
     {
         if(isGround)
         {
-            jumpCount=2;
+            jumpCount=1;
             isJump=false;
+            if(rb.velocity.y<-13)
+            {
+                Destroy(gameObject);
+            }
         }
         if(jumpPress&&isGround)
         {
@@ -117,7 +124,7 @@ public class playermove : MonoBehaviour
     void SwitchAnim()
     {
         anima.SetBool("idle",false);
-        if(rb.velocity.y<-0.5f && !coll.IsTouchingLayers(ground))
+        if(rb.velocity.y<-0.5f && !coll.IsTouchingLayers(ground)&& !coll.IsTouchingLayers(project))
         {
             anima.SetBool("jumping",false);
             anima.SetBool("falling",true);
@@ -142,7 +149,7 @@ public class playermove : MonoBehaviour
                 isHurt=false;
             }
         }
-        else if (coll.IsTouchingLayers(ground))
+        else if (coll.IsTouchingLayers(ground)||coll.IsTouchingLayers(project))
         {
             anima.SetBool("falling",false);
             anima.SetBool("idle",true);
@@ -206,6 +213,7 @@ public class playermove : MonoBehaviour
                 isHurt=true;
             }
         }
+      
         
     }
     void couch()
@@ -230,6 +238,14 @@ public class playermove : MonoBehaviour
     void restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
+    }
+    void maxspeed()
+    {
+        if(rb.velocity.y<fallSpeed)
+        {
+            fallSpeed=rb.velocity.y;
+        }
     }
 
 }

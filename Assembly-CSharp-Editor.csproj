@@ -67,43 +67,43 @@
      <Compile Include="Assets\Addons\Tilemap\Tiles\Rule Tile\Scripts\Editor\CustomRuleTileMenu.cs" />
      <Compile Include="Assets\Addons\Tilemap\Tiles\Rule Tile\Scripts\Editor\RuleTileEditor.cs" />
  <Reference Include="Cinemachine">
- <HintPath>E:/Multitude/1.6/Multitude/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
  <Reference Include="Unity.DocZh.Editor">
- <HintPath>E:/Multitude/1.6/Multitude/Library/ScriptAssemblies/Unity.DocZh.Editor.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/ScriptAssemblies/Unity.DocZh.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.UIWidgets.Editor">
- <HintPath>E:/Multitude/1.6/Multitude/Library/ScriptAssemblies/Unity.UIWidgets.Editor.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/ScriptAssemblies/Unity.UIWidgets.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>E:/Multitude/1.6/Multitude/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.UIWidgets">
- <HintPath>E:/Multitude/1.6/Multitude/Library/ScriptAssemblies/Unity.UIWidgets.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/ScriptAssemblies/Unity.UIWidgets.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>E:/Multitude/1.6/Multitude/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>E:/Multitude/1.6/Multitude/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Messenger.Editor">
- <HintPath>E:/Multitude/1.6/Multitude/Library/ScriptAssemblies/Unity.Messenger.Editor.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/ScriptAssemblies/Unity.Messenger.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEditorBridge.023">
- <HintPath>E:/Multitude/1.6/Multitude/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.023.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.023.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.cinemachine.editor">
- <HintPath>E:/Multitude/1.6/Multitude/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>E:/Multitude/1.6/Multitude/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>E:/Multitude/1.6/Multitude/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEngineBridge.024">
- <HintPath>E:/Multitude/1.6/Multitude/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.024.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.024.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -337,22 +337,22 @@
  <HintPath>D:/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
- <HintPath>E:/Multitude/1.6/Multitude/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>E:/Multitude/1.6/Multitude/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>E:/Multitude/1.6/Multitude/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>E:/Multitude/1.6/Multitude/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>E:/Multitude/1.6/Multitude/Library/PackageCache/com.unity.messenger@1.0.7-preview/Editor/Third-Party/websocket-sharp.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/PackageCache/com.unity.messenger@1.0.7-preview/Editor/Third-Party/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
- <HintPath>E:/Multitude/1.6/Multitude/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+ <HintPath>E:/Multitude/1.7/Multitude/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
