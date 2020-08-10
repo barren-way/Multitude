@@ -35,7 +35,7 @@ public class robot : enemy
     {
         if(faceright)
         {
-            rb.velocity=new Vector2(speed,rb.velocity.y);
+            rb.velocity=new Vector2(rb.velocity.y,speed);
             if(transform.position.x>rightx)
             {
                 
@@ -57,7 +57,6 @@ public class robot : enemy
     }
 
     void OnCollisionEnter2D(Collision2D collider)
-    
     {
         if(collider.gameObject.tag=="Player")
         {
