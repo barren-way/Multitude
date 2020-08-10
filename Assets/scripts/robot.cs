@@ -17,6 +17,7 @@ public class robot : enemy
     protected override void Start()
     {
         base.Start();
+        player=GameObject.Find("player");
         rb=GetComponent<Rigidbody2D>();
         anim=GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
@@ -35,7 +36,7 @@ public class robot : enemy
     {
         if(faceright)
         {
-            rb.velocity=new Vector2(rb.velocity.y,speed);
+            rb.velocity=new Vector2(speed,rb.velocity.y);
             if(transform.position.x>rightx)
             {
                 

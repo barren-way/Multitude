@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class changeSenes : MonoBehaviour
 {
 
+    public float changeSenseHight;
     void Awake()
     {
         DontDestroyOnLoad (gameObject);
@@ -25,6 +26,7 @@ public class changeSenes : MonoBehaviour
             if(SceneManager.GetActiveScene().buildIndex==0)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+                gameObject.transform.position+=new Vector3(0,changeSenseHight,0);
             }
             
         }
@@ -33,6 +35,7 @@ public class changeSenes : MonoBehaviour
             if(SceneManager.GetActiveScene().buildIndex==1)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
+                gameObject.transform.position+=new Vector3(0,changeSenseHight,0);
             }
             
         }
