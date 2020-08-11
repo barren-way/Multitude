@@ -35,6 +35,7 @@ public class playermove : MonoBehaviour
     bool jumpPress;
     int jumpCount;
     public float fallSpeed;
+    public GameObject elevator;
 
 
     
@@ -60,8 +61,8 @@ public class playermove : MonoBehaviour
         if (!isHurt)
         {
             isGround=Physics2D.OverlapCircle(groundCheck.position,0.1f,ground)||Physics2D.OverlapCircle(groundCheck.position,0.1f,project);
-            Movement();
-            jump();
+            Movement(); 
+            jump();                
             Push();
         }   
         SwitchAnim();

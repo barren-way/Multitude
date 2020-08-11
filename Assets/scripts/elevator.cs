@@ -17,6 +17,7 @@ public class elevator : MonoBehaviour
     public BoxCollider2D coll_right;
     public BoxCollider2D coll_left;
     public BoxCollider2D coll_up;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

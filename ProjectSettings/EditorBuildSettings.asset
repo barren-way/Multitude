@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/steam1.unity
     guid: 1b985d4e9f6ba984f81dc912ae341845
+  - enabled: 1
+    path: Assets/Scenes/black2.unity
+    guid: bfb551589d0ddbb41b9f020a7cd5782c
   m_configObjects: {}

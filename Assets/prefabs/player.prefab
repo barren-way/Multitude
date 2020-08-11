@@ -125,9 +125,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.19130562, y: -0.8982382}
+  m_Offset: {x: -0.15208188, y: -0.9672833}
   serializedVersion: 2
-  m_Radius: 0.28561613
+  m_Radius: 0.29565698
 --- !u!114 &3543462229285949646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +151,9 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
+  project:
+    serializedVersion: 2
+    m_Bits: 2048
   coll: {fileID: 3543462229285949681}
   disColl: {fileID: 3543462229285949644}
   ceilingCheck: {fileID: 3543462229541720907}
@@ -160,6 +163,8 @@ MonoBehaviour:
   groundCheck: {fileID: 3543462230533657873}
   isGround: 1
   isJump: 0
+  fallSpeed: 0
+  elevator: {fileID: 0}
 --- !u!95 &3543462229285949647
 Animator:
   serializedVersion: 3
@@ -495,6 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d74d9c84ff1bb44a50731a6a73375c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changeSenseHight: 3
 --- !u!58 &1645987593
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -565,7 +571,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3543462230533658094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.17, y: -1.46, z: 0}
+  m_LocalPosition: {x: -0.17, y: -1.238, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3543462228983145083}
