@@ -10,10 +10,16 @@ public class elevator : MonoBehaviour
     public GameObject Player;
     public float upy,downy;
     public float speed = 2f;
-    public bool peng;
+    public bool IsElevator;
+    public bool Move;
+    public bool Up,Down;
+    //private PolygonCollider2D coll;
+    public BoxCollider2D coll_right;
+    public BoxCollider2D coll_left;
+    public BoxCollider2D coll_up;
     void Start()
     {
-        rb=GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         upy=uppoint.position.y;
         downy=downpoint.position.y;
         Destroy(uppoint.gameObject);
@@ -28,48 +34,78 @@ public class elevator : MonoBehaviour
     }
     void movement()
     {
-        if(Input.GetButton("Jump"))
+        if(IsElevator)
         {
-            //rb.velocity=new Vector2(speed,rb.velocity.y);
-            if(transform.position.y < upy)
-            {                
-               rb.velocity=new Vector2(rb.velocity.x,speed);
-            }
-            else
+            if(Input.GetButton("Pull"))
             {
-               rb.velocity=new Vector2(rb.velocity.x,0);
+                Move = true;
+                //rb.velocity=new Vector2(speed,rb.velocity.y);
+                coll_right.isTrigger = false;
+                coll_left.isTrigger = false;
+                coll_up.isTrigger = false;
+                if(transform.position.y < downy )
+                {
+                    rb.bodyType = RigidbodyType2D.Dynamic;               
+                    rb.velocity=new Vector2(rb.velocity.x,speed);
+                    Up = true;
+                    Down = false;
+                }
+                if(transform.position.y > upy)
+                {
+                    rb.bodyType = RigidbodyType2D.Dynamic;
+                    rb.velocity=new Vector2(rb.velocity.x,-speed);
+                    Up = false;
+                    Down = true;
+                }
             }
-        }
-        else if(Input.GetButton("Crouch"))
-        {
-
-            //rb.velocity=new Vector2(-speed,rb.velocity.y);
-            if(transform.position.y>downy)
+            if(transform.position.y > upy && rb.velocity.y > 0)
+            {
+                Move = false;
+                rb.velocity=new Vector2(rb.velocity.x,0);
+                rb.bodyType = RigidbodyType2D.Static;
+                coll_right.isTrigger = true;
+                coll_left.isTrigger = true;
+                coll_up.isTrigger = true;
+            }
+            if(transform.position.y < downy && rb.velocity.y < 0)
+            {
+                Move = false;
+                rb.velocity=new Vector2(rb.velocity.x,0);
+                rb.bodyType = RigidbodyType2D.Static;
+                coll_right.isTrigger = true;
+                coll_left.isTrigger = true;
+                coll_up.isTrigger = true;
+            }
+            if(Up && Move)
+            {
+                rb.velocity=new Vector2(rb.velocity.x,speed);
+            }
+            if(Down && Move)
             {
                 rb.velocity=new Vector2(rb.velocity.x,-speed);
             }
-            else
-            {
-               rb.velocity=new Vector2(rb.velocity.x,0);
-            }
-
-        }
-        else
-        {
-            rb.velocity=new Vector2(rb.velocity.x,0);
         }
     }
     void OnCollisionEnter2D(Collision2D collider)
     {
-        if(collider.gameObject.tag=="Player")
+        if(collider.gameObject.tag == "Player")
         {
             collider.gameObject.GetComponent<Rigidbody2D>().gravityScale=0;        
-            peng = true; 
+            IsElevator= true; 
+        }
+    }
+    void OnCollisionStay2D(Collision2D collider)
+    {
+        if(collider.gameObject.tag == "Player")
+        {
+            collider.gameObject.GetComponent<Rigidbody2D>().gravityScale=0;        
+            IsElevator= true; 
         }
     }
     void OnCollisionExit2D(Collision2D collider) 
     {
         collider.gameObject.GetComponent<Rigidbody2D>().gravityScale=1;
+        IsElevator = false;
     }
 
 }
