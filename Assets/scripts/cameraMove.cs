@@ -9,7 +9,7 @@ public class cameraMove : MonoBehaviour
     public GameObject player;
 
 
-    void Awake()
+    void Start()
     {
         transform.position=new Vector3 (0,0,-10);
         player=GameObject.Find("player");

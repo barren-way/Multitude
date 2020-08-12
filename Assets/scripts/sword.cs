@@ -8,6 +8,8 @@ public class sword : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject explosionVFXPrefab;
+    public GameObject dialog;
+
     void Start()
     {
     }
@@ -22,9 +24,13 @@ public class sword : MonoBehaviour
         if(collider.gameObject.tag == "Player")
         {
              Instantiate(explosionVFXPrefab,transform.position,transform.rotation);
+             dialog.SetActive(true);
              Destroy(gameObject);
-             playermove.PlayOrbAudio();                         
+             changeSenes.getSword=true;
+             playermove.PlayOrbAudio();  
+                                    
         }
     }
+
 
 }

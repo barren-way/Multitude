@@ -26,7 +26,9 @@ public class Case : MonoBehaviour
      public  bool Flag = false;
     void Start()
     {
-         rb = GetComponent<Rigidbody2D>();
+        Player=GameObject.Find("player"); 
+        rb = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
