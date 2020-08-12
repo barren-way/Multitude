@@ -7,12 +7,15 @@ using UnityEngine.SceneManagement;
 
 public class playermove : MonoBehaviour
 {
+    static playermove current;
     private Rigidbody2D rb;
     private Animator anima;
     public AudioSource jumpAudio,deadAudio;
     public GameObject Case;
     public bool IsPush;
     public bool isTouchCase;
+    public AudioClip orbFXClip;
+    AudioSource playerSource;
    
 
 
@@ -43,8 +46,10 @@ public class playermove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        current = this;
         rb=GetComponent<Rigidbody2D>();
         anima=GetComponent<Animator>();
+        playerSource = gameObject.AddComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -247,6 +252,11 @@ public class playermove : MonoBehaviour
         {
             fallSpeed=rb.velocity.y;
         }
+    }
+    public static void PlayOrbAudio()
+    {
+        current.playerSource.clip = current.orbFXClip;
+        current.playerSource.Play();
     }
 
 }
