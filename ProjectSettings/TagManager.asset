@@ -48,6 +48,9 @@ TagManager:
   - name: environment
     uniqueID: 2075054247
     locked: 0
+  - name: untouchObject
+    uniqueID: 3897738223
+    locked: 0
   - name: ground
     uniqueID: 249731725
     locked: 0

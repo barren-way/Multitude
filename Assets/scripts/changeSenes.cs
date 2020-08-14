@@ -8,7 +8,7 @@ public class changeSenes : MonoBehaviour
 
     public float changeSenseHight;
     public int levelNum = 1;
-    static public bool getSword = false;
+    static public bool getSword = true;
     void Start()
     {
         DontDestroyOnLoad(gameObject);
