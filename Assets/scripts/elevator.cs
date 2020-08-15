@@ -21,11 +21,13 @@ public class elevator : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.bodyType = RigidbodyType2D.Static;
         upy=uppoint.position.y;
         downy=downpoint.position.y;
         Destroy(uppoint.gameObject);
         Destroy(downpoint.gameObject);
         rb.gravityScale = 0;
+
     }
 
     // Update is called once per frame
