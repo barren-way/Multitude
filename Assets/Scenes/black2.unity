@@ -3479,5 +3479,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground3
       objectReference: {fileID: 0}
+    - target: {fileID: 9119948922979270254, guid: 596cab56d369f2b4e98ba5d019dbba84,
+        type: 3}
+      propertyPath: m_Points.Array.data[7].x
+      value: 12.519304
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119948922979270254, guid: 596cab56d369f2b4e98ba5d019dbba84,
+        type: 3}
+      propertyPath: m_Points.Array.data[7].y
+      value: -4.033985
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 596cab56d369f2b4e98ba5d019dbba84, type: 3}
