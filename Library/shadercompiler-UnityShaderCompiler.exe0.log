@@ -1,14 +1,4 @@
-Base path: D:/unity/mulu/Unity/Editor/Data
-Cmd: initializeCompiler
-Cmd: preprocess
-  insize=5075 outsize=1764 ok=1
-Cmd: preprocess
-  insize=2945 outsize=1632 ok=1
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
+Base path: D:/Unity/Editor/Data
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
