@@ -9,6 +9,8 @@ public class sword : MonoBehaviour
     // Start is called before the first frame update
     public GameObject explosionVFXPrefab;
     public GameObject dialog;
+    public Item thisItem;
+    public Inventory playerInventory;
 
     void Start()
     {
@@ -23,12 +25,24 @@ public class sword : MonoBehaviour
     {
         if(collider.gameObject.tag == "Player")
         {
+             AddNewItem();
              Instantiate(explosionVFXPrefab,transform.position,transform.rotation);
              dialog.SetActive(true);
              Destroy(gameObject);
              changeSenes.getSword=true;
              playermove.PlayOrbAudio();  
                                     
+        }
+    }
+    public void AddNewItem()
+    {
+        if(!playerInventory.itemList.Contains(thisItem))
+        {
+            playerInventory.itemList.Add(thisItem);
+        }
+        else
+        {
+            thisItem.itemNum+=1;
         }
     }
 
