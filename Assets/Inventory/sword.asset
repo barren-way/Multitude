@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: sword
   m_EditorClassIdentifier: 
   itemName: 
-  itemImage: {fileID: 0}
-  itemNum: 0
+  itemImage: {fileID: 21300000, guid: 950745e450a42df42a311737da8c7916, type: 3}
+  itemNum: 5
   itemInfo: 0

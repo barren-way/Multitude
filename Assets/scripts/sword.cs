@@ -36,14 +36,15 @@ public class sword : MonoBehaviour
     }
     public void AddNewItem()
     {
+
         if(!playerInventory.itemList.Contains(thisItem))
         {
             playerInventory.itemList.Add(thisItem);
         }
-        else
-        {
-            thisItem.itemNum+=1;
-        }
+        
+        //InventoryManager.CreateNewItem(thisItem);
+        InventoryManager.RefreshItem();
+
     }
 
 
