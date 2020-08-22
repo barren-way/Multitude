@@ -84,6 +84,7 @@
      <Compile Include="Assets\scripts\Inventory.cs" />
      <Compile Include="Assets\scripts\InventoryManager.cs" />
      <Compile Include="Assets\scripts\Item.cs" />
+     <Compile Include="Assets\scripts\monkey.cs" />
      <Compile Include="Assets\scripts\orb.cs" />
      <Compile Include="Assets\scripts\parallax.cs" />
      <Compile Include="Assets\scripts\playermove.cs" />
