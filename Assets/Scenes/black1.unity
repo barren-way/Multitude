@@ -4952,6 +4952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialog: {fileID: 1971439211}
+  saveData: {fileID: 11400000, guid: 6ca023db48fc0cf44bc8f787941fb94c, type: 2}
 --- !u!61 &1336998092
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5067,12 +5068,12 @@ PrefabInstance:
     - target: {fileID: 3543462228983145083, guid: bc55e072a10571a4fb2f0ce694272302,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.1
+      value: -33.63
       objectReference: {fileID: 0}
     - target: {fileID: 3543462228983145083, guid: bc55e072a10571a4fb2f0ce694272302,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12
+      value: -4.76
       objectReference: {fileID: 0}
     - target: {fileID: 3543462228983145083, guid: bc55e072a10571a4fb2f0ce694272302,
         type: 3}
@@ -6137,6 +6138,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1392915901}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1777887079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777887078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1577285f07e1982409c03244d12de444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myData: {fileID: 0}
+  slotGrid: {fileID: 0}
+  slotPrefab: {fileID: 0}
+  newPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &1777887091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6535,6 +6552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialog: {fileID: 1458116073}
+  saveData: {fileID: 0}
 --- !u!61 &1845944554
 BoxCollider2D:
   m_ObjectHideFlags: 0
