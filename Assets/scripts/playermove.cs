@@ -39,6 +39,7 @@ public class playermove : MonoBehaviour
     int jumpCount;
     public float fallSpeed;
     public GameObject elevator;
+    public dataSave saveData;
 
 
     
@@ -106,7 +107,10 @@ public class playermove : MonoBehaviour
             isJump=false;
             if(rb.velocity.y<-13)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
+                GetComponent<AudioSource>().enabled=false;
+                deadAudio.Play();
+                Invoke(nameof(restart),1);
             }
         }
         if(jumpPress&&isGround)
@@ -244,6 +248,16 @@ public class playermove : MonoBehaviour
     void restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+
+
+        gameObject.SetActive(true);
+        float x=saveData.itemList[0].x;
+
+        gameObject.transform.position=saveData.itemList[0];
+
+        
+
         
     }
     void maxspeed()

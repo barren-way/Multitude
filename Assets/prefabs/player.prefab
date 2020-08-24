@@ -20,6 +20,8 @@ GameObject:
   - component: {fileID: 3543462229285949685}
   - component: {fileID: 1645987582}
   - component: {fileID: 1645987593}
+  - component: {fileID: 1777887079}
+  - component: {fileID: 1777887091}
   m_Layer: 9
   m_Name: player
   m_TagString: Player
@@ -166,6 +168,7 @@ MonoBehaviour:
   isJump: 0
   fallSpeed: 0
   elevator: {fileID: 0}
+  saveData: {fileID: 0}
 --- !u!95 &3543462229285949647
 Animator:
   serializedVersion: 3
@@ -519,6 +522,36 @@ CircleCollider2D:
   m_Offset: {x: 0.08354274, y: 1.1066198}
   serializedVersion: 2
   m_Radius: 0.29987377
+--- !u!114 &1777887079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543462229285949642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1577285f07e1982409c03244d12de444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myData: {fileID: 0}
+  slotGrid: {fileID: 0}
+  slotPrefab: {fileID: 0}
+  newPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1777887091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543462229285949642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348640a66cda4fe42aa76b0e8185a2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mybag: {fileID: 0}
+  bagOpen: 1
 --- !u!1 &3543462229541720904
 GameObject:
   m_ObjectHideFlags: 0
