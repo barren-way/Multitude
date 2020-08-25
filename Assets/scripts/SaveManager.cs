@@ -17,6 +17,7 @@ public class SaveManager : MonoBehaviour
             Destroy(this);
         instance = this;
         RefreshItem();
+        
     }
     private void onEnable()
     {

@@ -24,10 +24,20 @@ public class Case : MonoBehaviour
      public GameObject Dialog;
      private bool showDialog=false;
      public  bool Flag = false;
+
+     public dataSave saveData;
+     public bool firstLoad=true;
+     public bool needSave;
     void Start()
     {
         Player=GameObject.Find("player"); 
         rb = GetComponent<Rigidbody2D>();
+        if(!firstLoad)
+        {
+            gameObject.transform.position=saveData.itemList[1];
+
+        }
+        firstLoad=false;
         
     }
 
@@ -85,6 +95,14 @@ public class Case : MonoBehaviour
         }
         else if (!isPull || !TouchCase)
             rb.gravityScale = 500;
+
+        if(changeSenes.afterChange)
+        {
+            gameObject.transform.position=saveData.itemList[1];
+            changeSenes.afterChange=false;
+        }
+        saveSense();
+        
     }
 
     
@@ -96,5 +114,20 @@ public class Case : MonoBehaviour
         Color color = hit ? Color.red : Color.green;
         Debug.DrawRay(pos + offset, rayDirection * length,color);
         return hit;
+    }
+
+    void saveSense()
+    {
+        
+        for(int i=0;i<saveData.taglist.Count;i++)
+        {
+            if(saveData.taglist[i]=="Box")
+            {
+                saveData.itemList[i]=gameObject.transform.position;
+
+            }
+            
+        }
+        
     }
 }

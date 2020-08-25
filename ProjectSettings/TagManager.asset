@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - deadLine
   - passLine
+  - Box
   layers:
   - Default
   - TransparentFX

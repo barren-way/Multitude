@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: SaveData
   m_EditorClassIdentifier: 
   itemList:
-  - {x: -34.154213, y: -5.1015553, z: 0}
+  - {x: 18.577276, y: 11.085295, z: -0.43379918}
+  - {x: -2.6258314, y: -2.389636, z: -0.19399464}
   taglist:
   - Player
+  - Box

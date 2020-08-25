@@ -9,6 +9,9 @@ public class changeSenes : MonoBehaviour
     public float changeSenseHight;
     public int levelNum = 1;
     static public bool getSword = true;
+    public GameObject box;
+    public dataSave saveData;
+    static public bool senesChanging=false,afterChange=false;
 
     void Start()
     {
@@ -34,11 +37,15 @@ public class changeSenes : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                
                 if (SceneManager.GetActiveScene().buildIndex == 1)
                 {
+                    senesChanging=true;
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                     gameObject.transform.position += new Vector3(0, changeSenseHight, 0);
+                    afterChange=true;
                 }
+
 
             }
             if (Input.GetKeyDown(KeyCode.Q))
@@ -46,7 +53,10 @@ public class changeSenes : MonoBehaviour
                 if (SceneManager.GetActiveScene().buildIndex == 2)
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+                    
                     gameObject.transform.position += new Vector3(0, changeSenseHight, 0);
+                    GameObject.Find("case");
+                    afterChange=true;
                 }
             }
         }
@@ -100,4 +110,7 @@ public class changeSenes : MonoBehaviour
 
         }
     }
+
+    
+
 }
