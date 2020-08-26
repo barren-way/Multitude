@@ -32,6 +32,7 @@ public class playermove : MonoBehaviour
     public int cherry;
     public Text cherryNum;
     public bool isHurt;
+    public bool isStart;
 
     public Transform groundCheck;
     public bool isGround,isJump;
@@ -84,6 +85,14 @@ public class playermove : MonoBehaviour
         
         //角色移动
 
+        if(isStart)
+        {
+            anima.SetBool("start",true);
+        }
+        else
+        {
+            anima.SetBool("start",false);
+        }
         if (facedircetion!=0)
         {
            transform.localScale = new Vector3(facedircetion,1,1); 
