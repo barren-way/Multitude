@@ -12,6 +12,7 @@ public class changeSenes : MonoBehaviour
     public GameObject box;
     public dataSave saveData;
     static public bool senesChanging=false,afterChange=false;
+    public BoolData boolSave;
 
     void Start()
     {
@@ -25,7 +26,7 @@ public class changeSenes : MonoBehaviour
     }
     void Update()
     {
-        if(getSword)
+        if(boolSave.itemList[0])
         {
             transition();
         }

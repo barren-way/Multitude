@@ -8,6 +8,8 @@ public class InventoryManager : MonoBehaviour
     public Inventory myBag;
     public GameObject slotGrid;
     public Slot slotPrefab;
+    public BoolData boolSave;
+    public GameObject sword;
 
     void Awake()
     {
@@ -15,6 +17,10 @@ public class InventoryManager : MonoBehaviour
             Destroy(this);
         instance = this;
         RefreshItem();
+    }
+    void Update()
+    {
+        checkSword();
     }
     private void onEnable()
     {
@@ -42,6 +48,18 @@ public class InventoryManager : MonoBehaviour
         for(int i =0;i<instance.myBag.itemList.Count;i++)
         {
             CreateNewItem(instance.myBag.itemList[i]);
+        }
+    }
+    public void checkSword()
+    {
+        boolSave.itemList[0]=false;
+        for(int i =0;i<myBag.itemList.Count;i++)
+        {
+            if(myBag.itemList[i].itemName=="sword")
+            {
+                Destroy(sword);
+                boolSave.itemList[0]=true;
+            }
         }
     }
 

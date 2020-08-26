@@ -163,12 +163,13 @@ MonoBehaviour:
   cherry: 0
   cherryNum: {fileID: 0}
   isHurt: 0
+  isStart: 0
   groundCheck: {fileID: 3543462230533657873}
   isGround: 1
   isJump: 0
   fallSpeed: 0
   elevator: {fileID: 0}
-  saveData: {fileID: 0}
+  saveData: {fileID: 11400000, guid: 6ca023db48fc0cf44bc8f787941fb94c, type: 2}
 --- !u!95 &3543462229285949647
 Animator:
   serializedVersion: 3
@@ -506,6 +507,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeSenseHight: 3
   levelNum: 1
+  box: {fileID: 0}
+  saveData: {fileID: 11400000, guid: 6ca023db48fc0cf44bc8f787941fb94c, type: 2}
+  boolSave: {fileID: 11400000, guid: 0b7b01eaa14d6714892004e16d512c4a, type: 2}
 --- !u!58 &1645987593
 CircleCollider2D:
   m_ObjectHideFlags: 0

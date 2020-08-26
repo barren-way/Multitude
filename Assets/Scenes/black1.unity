@@ -1616,7 +1616,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.804148, y: -1.8002293, z: -10}
+  m_LocalPosition: {x: -26.800514, y: -1.8001947, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2152,6 +2152,8 @@ MonoBehaviour:
   slotGrid: {fileID: 751621605}
   slotPrefab: {fileID: 114302916576863906, guid: 7194b4cf7835a8d4f9f3715aef031021,
     type: 3}
+  boolSave: {fileID: 11400000, guid: 0b7b01eaa14d6714892004e16d512c4a, type: 2}
+  sword: {fileID: 1474732655}
 --- !u!1 &740885560
 GameObject:
   m_ObjectHideFlags: 0
@@ -7143,6 +7145,8 @@ MonoBehaviour:
   timbo: {fileID: 983586376}
   timboCollider: {fileID: 0}
   player: {fileID: 0}
+  boolSave: {fileID: 11400000, guid: 0b7b01eaa14d6714892004e16d512c4a, type: 2}
+  rock: {fileID: 2085285756}
 --- !u!61 &1898605049
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7498,23 +7502,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1645987582, guid: bc55e072a10571a4fb2f0ce694272302, type: 3}
-      propertyPath: saveData
-      value: 
-      objectReference: {fileID: 11400000, guid: 6ca023db48fc0cf44bc8f787941fb94c,
-        type: 2}
-    - target: {fileID: 1645987582, guid: bc55e072a10571a4fb2f0ce694272302, type: 3}
       propertyPath: box
       value: 
       objectReference: {fileID: 964037468}
     - target: {fileID: 3543462228983145083, guid: bc55e072a10571a4fb2f0ce694272302,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.9
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 3543462228983145083, guid: bc55e072a10571a4fb2f0ce694272302,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.13
+      value: -3.4
       objectReference: {fileID: 0}
     - target: {fileID: 3543462228983145083, guid: bc55e072a10571a4fb2f0ce694272302,
         type: 3}
@@ -7566,12 +7565,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
-    - target: {fileID: 3543462229285949646, guid: bc55e072a10571a4fb2f0ce694272302,
-        type: 3}
-      propertyPath: saveData
-      value: 
-      objectReference: {fileID: 11400000, guid: 6ca023db48fc0cf44bc8f787941fb94c,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc55e072a10571a4fb2f0ce694272302, type: 3}
 --- !u!1 &2085285756
