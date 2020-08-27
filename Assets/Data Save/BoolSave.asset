@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2fa33452d89b3b46a841e8ba061feda, type: 3}
   m_Name: BoolSave
   m_EditorClassIdentifier: 
-  itemList: 0101
+  itemList: 010100
   taglist:
   - sword
   - timbo
+  - elevator

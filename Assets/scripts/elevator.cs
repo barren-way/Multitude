@@ -17,6 +17,7 @@ public class elevator : MonoBehaviour
     public BoxCollider2D coll_right;
     public BoxCollider2D coll_left;
     public BoxCollider2D coll_up;
+    public BoolData boolSave;
 
     void Start()
     {
@@ -27,6 +28,10 @@ public class elevator : MonoBehaviour
         Destroy(uppoint.gameObject);
         Destroy(downpoint.gameObject);
         rb.gravityScale = 0;
+        if(boolSave.itemList[2])
+        {
+            gameObject.transform.position=new Vector3(gameObject.transform.position.x,upy,gameObject.transform.position.z);
+        }
 
     }
 
@@ -52,6 +57,7 @@ public class elevator : MonoBehaviour
                     rb.velocity=new Vector2(rb.velocity.x,speed);
                     Up = true;
                     Down = false;
+                    boolSave.itemList[2]=true;
                 }
                 if(transform.position.y > upy)
                 {
@@ -59,6 +65,7 @@ public class elevator : MonoBehaviour
                     rb.velocity=new Vector2(rb.velocity.x,-speed);
                     Up = false;
                     Down = true;
+                    boolSave.itemList[2]=false;
                 }
             }
             if(transform.position.y > upy && rb.velocity.y > 0)

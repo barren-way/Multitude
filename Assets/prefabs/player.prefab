@@ -165,7 +165,7 @@ MonoBehaviour:
   isHurt: 0
   isStart: 0
   groundCheck: {fileID: 3543462230533657873}
-  isGround: 1
+  isGround: 0
   isJump: 0
   fallSpeed: 0
   elevator: {fileID: 0}

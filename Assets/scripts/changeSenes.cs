@@ -111,6 +111,10 @@ public class changeSenes : MonoBehaviour
 
         }
     }
+    void reLoadObject()
+    {
+        
+    }
 
     
 

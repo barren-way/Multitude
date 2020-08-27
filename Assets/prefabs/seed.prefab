@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4452344512542380443}
   - component: {fileID: 4452344512542380444}
+  - component: {fileID: 4452344513287397828}
+  - component: {fileID: 4452344513287397825}
   m_Layer: 0
   m_Name: seed
   m_TagString: Untagged
@@ -80,6 +82,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &4452344513287397828
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452344512542380445}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.04732132, y: -0.44933224}
+  serializedVersion: 2
+  m_Radius: 0.65177536
+--- !u!114 &4452344513287397825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452344512542380445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453a59516379cb94d910999593a68cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myBag: {fileID: 11400000, guid: f4fa10db436c4724da9b425ebfbe7a12, type: 2}
+  explosionVFXPrefab: {fileID: 1305675960232650, guid: 1e4ec98ba4bb0244292ae6c0c26be7f4,
+    type: 3}
+  boolSave: {fileID: 11400000, guid: 0b7b01eaa14d6714892004e16d512c4a, type: 2}
+  thisItem: {fileID: 11400000, guid: 107c08fe18b9f6a498235a13f6abd87a, type: 2}
 --- !u!1 &4452344512849110279
 GameObject:
   m_ObjectHideFlags: 0

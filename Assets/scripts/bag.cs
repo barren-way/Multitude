@@ -9,7 +9,7 @@ public class bag : MonoBehaviour
     public bool bagOpen=true;
     void Start()
     {
-        
+        mybag=GameObject.Find("bag");
     }
 
     // Update is called once per frame
