@@ -28,7 +28,7 @@ public class UI : MonoBehaviour
         isUI = true;
         if(collider.tag =="Player" && flag == true)
         {
-            Player.GetComponent<playermove>().isStart = true;
+            //Player.GetComponent<playermove>().isStart = true;
             flag = false;
         }
     }
@@ -36,7 +36,7 @@ public class UI : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collider) 
     {
         isUI = false;
-        Player.GetComponent<playermove>().isStart = false;
+        //Player.GetComponent<playermove>().isStart = false;
     }
 
 }

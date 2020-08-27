@@ -49,6 +49,7 @@ public class playermove : MonoBehaviour
     void Start()
     {
         current = this;
+        isStart = true;
         rb=GetComponent<Rigidbody2D>();
         anima=GetComponent<Animator>();
         playerSource = gameObject.AddComponent<AudioSource>();
@@ -58,13 +59,16 @@ public class playermove : MonoBehaviour
     
     void Update()
     {
+
         if(Input.GetButtonDown("Jump")&&jumpCount>0)
         {
             jumpPress=true;
         }
+        
     }
     void FixedUpdate()
     {
+        StartAnim();
         if (!isHurt)
         {
             isGround=Physics2D.OverlapCircle(groundCheck.position,0.1f,ground)||Physics2D.OverlapCircle(groundCheck.position,0.1f,project);
@@ -73,6 +77,18 @@ public class playermove : MonoBehaviour
             Push();
         }   
         SwitchAnim();
+        
+    }
+    void StartAnim()
+    {
+        if(isStart)
+        {
+            anima.SetBool("start",true);
+        }
+        else
+        {
+            anima.SetBool("start",false);
+        }
     }
 
     void Movement()
@@ -85,14 +101,6 @@ public class playermove : MonoBehaviour
         
         //角色移动
 
-        if(isStart)
-        {
-            anima.SetBool("start",true);
-        }
-        else
-        {
-            anima.SetBool("start",false);
-        }
         if (facedircetion!=0)
         {
            transform.localScale = new Vector3(facedircetion,1,1); 
@@ -280,6 +288,10 @@ public class playermove : MonoBehaviour
     {
         current.playerSource.clip = current.orbFXClip;
         current.playerSource.Play();
+    }
+    void afterstart()
+    {
+        isStart = false;
     }
 
 }
