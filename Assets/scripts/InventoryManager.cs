@@ -10,6 +10,8 @@ public class InventoryManager : MonoBehaviour
     public Slot slotPrefab;
     public BoolData boolSave;
     public GameObject sword;
+    public GameObject frame;
+    private Item onItem;
 
     void Awake()
     {
@@ -21,6 +23,7 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
         checkSword();
+        checkOnObject();
     }
     private void onEnable()
     {
@@ -59,6 +62,18 @@ public class InventoryManager : MonoBehaviour
             {
                 Destroy(sword);
                 boolSave.itemList[0]=true;
+            }
+        }
+    }
+    public void checkOnObject()
+    {
+        onItem=myBag.itemList[frame.GetComponent<Frame>().num];
+        if(onItem.itemName=="seed")
+        {
+            if(Input.GetKeyDown(KeyCode.K))
+            {
+                
+                
             }
         }
     }
