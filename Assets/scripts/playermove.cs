@@ -49,7 +49,7 @@ public class playermove : MonoBehaviour
     void Start()
     {
         current = this;
-        isStart = true;
+        //isStart = true;
         rb=GetComponent<Rigidbody2D>();
         anima=GetComponent<Animator>();
         playerSource = gameObject.AddComponent<AudioSource>();
