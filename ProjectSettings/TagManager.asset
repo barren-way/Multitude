@@ -52,6 +52,9 @@ TagManager:
   - name: untouchObject
     uniqueID: 3897738223
     locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: ground
     uniqueID: 249731725
     locked: 0
@@ -60,7 +63,4 @@ TagManager:
     locked: 0
   - name: FrontGround
     uniqueID: 4000326143
-    locked: 0
-  - name: Default
-    uniqueID: 0
     locked: 0

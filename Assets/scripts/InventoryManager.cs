@@ -8,10 +8,13 @@ public class InventoryManager : MonoBehaviour
     public Inventory myBag;
     public GameObject slotGrid;
     public Slot slotPrefab;
+    public GameObject seeds;
     public BoolData boolSave;
     public GameObject sword;
     public GameObject frame;
     private Item onItem;
+    public GameObject player;
+    public Position breadPosition;
 
     void Awake()
     {
@@ -19,11 +22,13 @@ public class InventoryManager : MonoBehaviour
             Destroy(this);
         instance = this;
         RefreshItem();
+        player=GameObject.Find("player");
     }
     void Update()
     {
         checkSword();
         checkOnObject();
+        
     }
     private void onEnable()
     {
@@ -72,8 +77,11 @@ public class InventoryManager : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.K))
             {
-                
-                
+                myBag.itemList.Remove(onItem);
+                RefreshItem();
+                GameObject newItem = Instantiate(seeds,instance.player.transform.position,Quaternion.identity);
+                newItem.GetComponent<Seed>().bread=true;
+                newItem.transform.position=new Vector3(newItem.transform.position.x,newItem.transform.position.y-1,newItem.transform.position.z);
             }
         }
     }

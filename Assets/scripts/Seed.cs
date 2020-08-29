@@ -10,6 +10,7 @@ public class Seed : MonoBehaviour
 
     public BoolData boolSave;
     public Item thisItem;
+    public bool bread=false;
 
 
     void Start()
@@ -48,9 +49,10 @@ public class Seed : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collider)
     {
-        if(collider.gameObject.tag == "Player")
+        if(collider.gameObject.tag == "Player"&&!bread)
         {
              AddNewItem();
+             
              Instantiate(explosionVFXPrefab,transform.position,transform.rotation);
              Destroy(gameObject);
              changeSenes.getSword=true;

@@ -15412,9 +15412,12 @@ MonoBehaviour:
   slotGrid: {fileID: 1034339430}
   slotPrefab: {fileID: 114302916576863906, guid: 7194b4cf7835a8d4f9f3715aef031021,
     type: 3}
+  seeds: {fileID: 4452344512542380445, guid: 880746aa4a029c546925fcf6004fe429, type: 3}
   boolSave: {fileID: 11400000, guid: 0b7b01eaa14d6714892004e16d512c4a, type: 2}
   sword: {fileID: 0}
   frame: {fileID: 1742478165}
+  player: {fileID: 0}
+  breadPosition: {fileID: 0}
 --- !u!1 &689911994
 GameObject:
   m_ObjectHideFlags: 0
@@ -37902,7 +37905,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884596179}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.29248, y: 4.4988422, z: 18.035648}
+  m_LocalPosition: {x: 10.57, y: 4.4988422, z: 18.035648}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children:
   - {fileID: 1123799984}
@@ -41929,7 +41932,7 @@ PrefabInstance:
     - target: {fileID: 4452344512542380443, guid: 880746aa4a029c546925fcf6004fe429,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.02
+      value: 22.96
       objectReference: {fileID: 0}
     - target: {fileID: 4452344512542380443, guid: 880746aa4a029c546925fcf6004fe429,
         type: 3}

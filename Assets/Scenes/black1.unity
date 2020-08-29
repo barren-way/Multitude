@@ -355,12 +355,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162208530}
   m_CullTransparentMesh: 0
---- !u!1 &179028719 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3543462229285949642, guid: bc55e072a10571a4fb2f0ce694272302,
-    type: 3}
-  m_PrefabInstance: {fileID: 2066794968}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &209058060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,7 +1799,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.800514, y: -1.8001947, z: -10}
+  m_LocalPosition: {x: -26.798685, y: -1.8001771, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2358,6 +2352,7 @@ MonoBehaviour:
     type: 3}
   boolSave: {fileID: 11400000, guid: 0b7b01eaa14d6714892004e16d512c4a, type: 2}
   sword: {fileID: 1474732655}
+  frame: {fileID: 0}
 --- !u!1 &740885560
 GameObject:
   m_ObjectHideFlags: 0
@@ -6982,7 +6977,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   talkUI: {fileID: 1340501960}
-  Player: {fileID: 179028719}
   isUI: 0
 --- !u!61 &1849843582
 BoxCollider2D:
