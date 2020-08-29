@@ -7,13 +7,11 @@ public class UI : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject talkUI;
-    public GameObject Player;
     private bool flag;
     public bool isUI;
     // Update is called once per frame
     void Start() 
     {
-        Player=GameObject.Find("player"); 
         flag = true;
     }
     void Update()
