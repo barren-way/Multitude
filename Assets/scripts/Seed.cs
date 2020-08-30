@@ -11,6 +11,9 @@ public class Seed : MonoBehaviour
     public BoolData boolSave;
     public Item thisItem;
     public bool bread=false;
+    public Collider2D pickColl;
+    public Collider2D breadColl;
+
 
 
     void Start()
@@ -34,6 +37,11 @@ public class Seed : MonoBehaviour
                 boolSave.itemList[0]=true;
             }*/
         }
+        if(bread)
+        {
+            pickColl.enabled=false;
+            breadColl.enabled=true;
+        }
     }
     public void AddNewItem()
     {
@@ -47,16 +55,19 @@ public class Seed : MonoBehaviour
         InventoryManager.RefreshItem();
 
     }
-    void OnCollisionEnter2D(Collision2D collider)
+
+    void  OnCollisionEnter2D(Collision2D collider)
     {
         if(collider.gameObject.tag == "Player"&&!bread)
         {
-             AddNewItem();
-             
+
+            AddNewItem();
              Instantiate(explosionVFXPrefab,transform.position,transform.rotation);
              Destroy(gameObject);
              changeSenes.getSword=true;
-             playermove.PlayOrbAudio();  
+             playermove.PlayOrbAudio();
+
+               
                                     
         }
     }

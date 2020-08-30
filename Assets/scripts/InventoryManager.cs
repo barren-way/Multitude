@@ -70,6 +70,7 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
+    
     public void checkOnObject()
     {
         onItem=myBag.itemList[frame.GetComponent<Frame>().num];
@@ -81,7 +82,7 @@ public class InventoryManager : MonoBehaviour
                 RefreshItem();
                 GameObject newItem = Instantiate(seeds,instance.player.transform.position,Quaternion.identity);
                 newItem.GetComponent<Seed>().bread=true;
-                newItem.transform.position=new Vector3(newItem.transform.position.x,newItem.transform.position.y-1,newItem.transform.position.z);
+                newItem.transform.position=new Vector3(newItem.transform.position.x,newItem.transform.position.y-0.8f,newItem.transform.position.z);
             }
         }
     }

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4452344512542380444}
   - component: {fileID: 4452344513287397828}
   - component: {fileID: 4452344513287397825}
+  - component: {fileID: 453351628}
   m_Layer: 0
   m_Name: seed
-  m_TagString: Untagged
+  m_TagString: seed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,12 +93,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04732132, y: -0.44933224}
+  m_Offset: {x: 0.076496124, y: -0.34804058}
   serializedVersion: 2
-  m_Radius: 0.65177536
+  m_Radius: 1.2506227
 --- !u!114 &4452344513287397825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +116,25 @@ MonoBehaviour:
     type: 3}
   boolSave: {fileID: 11400000, guid: 0b7b01eaa14d6714892004e16d512c4a, type: 2}
   thisItem: {fileID: 11400000, guid: 107c08fe18b9f6a498235a13f6abd87a, type: 2}
+  bread: 0
+  pickColl: {fileID: 4452344513287397828}
+  breadColl: {fileID: 453351628}
+--- !u!58 &453351628
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452344512542380445}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.034023285, y: -0.44424248}
+  serializedVersion: 2
+  m_Radius: 0.55379105
 --- !u!1 &4452344512849110279
 GameObject:
   m_ObjectHideFlags: 0

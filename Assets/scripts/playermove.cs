@@ -209,6 +209,7 @@ public class playermove : MonoBehaviour
         }
         if(collision.tag=="deadLine")
         {
+            gameObject.SetActive(false);
             GetComponent<AudioSource>().enabled=false;
             deadAudio.Play();
             Invoke(nameof(restart),1);
