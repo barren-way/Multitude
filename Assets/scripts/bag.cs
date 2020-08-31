@@ -10,6 +10,8 @@ public class bag : MonoBehaviour
     public bool bagOpen=true;
     public Item thisItem;
     public GameObject explosionVFXPrefab;
+    public bool onSeed;
+    public GameObject seedObject;
     void Start()
     {
         bags=GameObject.Find("bag");
@@ -19,6 +21,7 @@ public class bag : MonoBehaviour
     void Update()
     {
         openBag();
+        pickObject();
     }
 
     void openBag()
@@ -45,9 +48,26 @@ public class bag : MonoBehaviour
     {
         if(other.tag=="seed")
         {
+            onSeed=true;
+            seedObject=other.gameObject;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.tag=="seed")
+        {
+            onSeed=false;
+        }
+    }
+
+    public void pickObject()
+    {
+        if(Input.GetButton("Pull"))
+        {
             AddNewItem();
              Instantiate(explosionVFXPrefab,transform.position,transform.rotation);
-             Destroy(other.gameObject);
+             Destroy(seedObject);
              changeSenes.getSword=true;
              playermove.PlayOrbAudio();
         }

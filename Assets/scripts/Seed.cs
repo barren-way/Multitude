@@ -13,12 +13,17 @@ public class Seed : MonoBehaviour
     public bool bread=false;
     public Collider2D pickColl;
     public Collider2D breadColl;
+    public bool grow;
+    public GameObject timbo;
+    public Animator anim;
 
 
 
     void Start()
     {
-        
+        Transform[] trans=GetComponentsInChildren<Transform>();
+        timbo=trans[2].gameObject;
+        anim=timbo.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -56,19 +61,13 @@ public class Seed : MonoBehaviour
 
     }
 
-    void  OnCollisionEnter2D(Collision2D collider)
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(collider.gameObject.tag == "Player"&&!bread)
+        if(other.gameObject.tag == "Player"&&bread)
         {
 
-            AddNewItem();
-             Instantiate(explosionVFXPrefab,transform.position,transform.rotation);
-             Destroy(gameObject);
-             changeSenes.getSword=true;
-             playermove.PlayOrbAudio();
-
-               
-                                    
+            anim.SetBool("grow",true);                                  
         }
     }
 }
