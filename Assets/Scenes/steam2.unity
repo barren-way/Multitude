@@ -1544,6 +1544,12 @@ MonoBehaviour:
   Monkey: {fileID: 10115742}
   Catalyzer: 0
   CatalyzerNum: {fileID: 1772202009}
+  CaseOffsetX: 4.5
+  CaseOffsetY: -0.4
+  length: 2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!212 &520570363
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1600,8 +1606,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520570360}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 61.11, y: 12.68, z: 0}
-  m_LocalScale: {x: 1.5062593, y: 1.7756773, z: 0.17594363}
+  m_LocalPosition: {x: 60.63, y: 12.32, z: 0}
+  m_LocalScale: {x: 1.3438709, y: 1.5700432, z: 0.15697531}
   m_Children:
   - {fileID: 1624932111}
   m_Father: {fileID: 0}

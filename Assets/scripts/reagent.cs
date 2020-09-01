@@ -12,6 +12,13 @@ public class reagent : MonoBehaviour
     public int Catalyzer;
     public Text CatalyzerNum;
     private Animator anim;
+    private bool flag;
+
+     [Header("射线")]
+     public float CaseOffsetX = 4.5f;
+     public float CaseOffsetY = -0.4f;
+     public float length = 2f;
+     public LayerMask groundLayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,15 +28,13 @@ public class reagent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButton("Pull"))
+        CreatRay();
+        if(Input.GetButton("Pull") && flag == true)   //使用机器
         {
             anim.SetBool("light",true); 
             //useDialog.SetActive(false); 
         }
-    }
-    void OnCollisionEnter2D(Collision2D collider)
-    {
-        if(collider.gameObject.tag == "Player")
+        if( Input.GetKeyDown(KeyCode.R) && flag == true)  //收集机器
         {
              Instantiate(explosionVFXPrefab,transform.position,transform.rotation);
              playermove.PlayOrbAudio();  
@@ -37,7 +42,35 @@ public class reagent : MonoBehaviour
              CatalyzerNum.text = Catalyzer.ToString(); 
              useDialog.SetActive(true);  
              Monkey.GetComponent<monkey>().grow = true;
-             Destroy(gameObject);                     
+             Destroy(gameObject); 
+        }
+    }
+    //void OnCollisionEnter2D(Collision2D collider)
+    //{
+
+    //}
+
+    RaycastHit2D Raycast(Vector2 offset, Vector2 rayDirection, float length, LayerMask layer)
+    {
+        Vector2 pos = transform.position;
+        RaycastHit2D hit = Physics2D.Raycast(pos + offset, rayDirection, length, layer);
+        Color color = hit ? Color.red : Color.green;
+        Debug.DrawRay(pos + offset, rayDirection * length,color);
+        return hit;
+    }
+    void CreatRay()
+    {
+        Vector2 OffsetR = new Vector2(CaseOffsetX-5, CaseOffsetY);
+        Vector2 OffsetL = new Vector2(CaseOffsetX*-1, CaseOffsetY);
+        RaycastHit2D RightCheck = Raycast(OffsetR, Vector2.right, length, groundLayer);
+        RaycastHit2D LeftCheck = Raycast(OffsetL, Vector2.left, length, groundLayer);
+        if(RightCheck || LeftCheck)
+        {
+            flag = true;
+        }
+        else
+        {
+            flag = false;
         }
     }
 }
