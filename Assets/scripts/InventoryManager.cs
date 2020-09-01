@@ -14,7 +14,10 @@ public class InventoryManager : MonoBehaviour
     public GameObject frame;
     private Item onItem;
     public GameObject player;
-    public Position breadPosition;
+
+    public GameObject slope;
+
+
 
     void Awake()
     {
@@ -28,6 +31,7 @@ public class InventoryManager : MonoBehaviour
     {
         checkSword();
         checkOnObject();
+
         
     }
     private void onEnable()
@@ -80,9 +84,23 @@ public class InventoryManager : MonoBehaviour
             {
                 myBag.itemList.Remove(onItem);
                 RefreshItem();
-                GameObject newItem = Instantiate(seeds,instance.player.transform.position,Quaternion.identity);
-                newItem.GetComponent<Seed>().bread=true;
-                newItem.transform.position=new Vector3(newItem.transform.position.x,newItem.transform.position.y-0.8f,newItem.transform.position.z);
+                if(slope.GetComponent<slope>().onSlope)
+                {
+                    print(slope.GetComponent<slope>().onSlope);
+                    GameObject newItem = Instantiate(seeds,instance.player.transform.position,transform.rotation);
+                    newItem.GetComponent<Seed>().bread=true;
+                    newItem.transform.position=new Vector3(newItem.transform.position.x,newItem.transform.position.y-1.2f,newItem.transform.position.z);
+                    newItem.transform.rotation=Quaternion.Euler(0.0f,0.0f,-45f);
+                }
+                else
+                {
+                    print(slope.GetComponent<slope>().onSlope);
+                    GameObject newItem = Instantiate(seeds,instance.player.transform.position,transform.rotation);
+                    newItem.GetComponent<Seed>().bread=true;
+                    newItem.transform.position=new Vector3(newItem.transform.position.x,newItem.transform.position.y-0.8f,newItem.transform.position.z);
+                }
+
+                
             }
         }
     }

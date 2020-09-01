@@ -80,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -715823741
-  m_SortingLayer: -2
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300054, guid: 4b64ae7d3cf5bbd44ae27eb251205b9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -554,8 +554,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 348640a66cda4fe42aa76b0e8185a2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mybag: {fileID: 0}
+  bags: {fileID: 0}
+  myBag: {fileID: 11400000, guid: f4fa10db436c4724da9b425ebfbe7a12, type: 2}
   bagOpen: 1
+  thisItem: {fileID: 11400000, guid: 107c08fe18b9f6a498235a13f6abd87a, type: 2}
+  explosionVFXPrefab: {fileID: 1305675960232650, guid: 1e4ec98ba4bb0244292ae6c0c26be7f4,
+    type: 3}
+  onSeed: 0
+  seedObject: {fileID: 0}
 --- !u!1 &3543462229541720904
 GameObject:
   m_ObjectHideFlags: 0

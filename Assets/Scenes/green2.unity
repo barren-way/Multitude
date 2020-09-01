@@ -15488,12 +15488,13 @@ MonoBehaviour:
   slotGrid: {fileID: 1034339430}
   slotPrefab: {fileID: 114302916576863906, guid: 7194b4cf7835a8d4f9f3715aef031021,
     type: 3}
-  seeds: {fileID: 4452344512542380445, guid: 880746aa4a029c546925fcf6004fe429, type: 3}
   boolSave: {fileID: 11400000, guid: 0b7b01eaa14d6714892004e16d512c4a, type: 2}
   sword: {fileID: 0}
   frame: {fileID: 1742478165}
   player: {fileID: 0}
-  breadPosition: {fileID: 0}
+  slope: {fileID: 0}
+  flatSeed: {fileID: 0}
+  slopeSeed: {fileID: 0}
 --- !u!1 &689911994
 GameObject:
   m_ObjectHideFlags: 0
@@ -21192,21 +21193,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1777887091, guid: bc55e072a10571a4fb2f0ce694272302, type: 3}
-      propertyPath: explosionVFXPrefab
-      value: 
-      objectReference: {fileID: 1305675960232650, guid: 1e4ec98ba4bb0244292ae6c0c26be7f4,
-        type: 3}
-    - target: {fileID: 1777887091, guid: bc55e072a10571a4fb2f0ce694272302, type: 3}
-      propertyPath: myBag
-      value: 
-      objectReference: {fileID: 11400000, guid: f4fa10db436c4724da9b425ebfbe7a12,
-        type: 2}
-    - target: {fileID: 1777887091, guid: bc55e072a10571a4fb2f0ce694272302, type: 3}
-      propertyPath: thisItem
-      value: 
-      objectReference: {fileID: 11400000, guid: 107c08fe18b9f6a498235a13f6abd87a,
-        type: 2}
     - target: {fileID: 3543462228983145083, guid: bc55e072a10571a4fb2f0ce694272302,
         type: 3}
       propertyPath: m_LocalPosition.x
