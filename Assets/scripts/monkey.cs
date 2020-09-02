@@ -16,7 +16,7 @@ public class monkey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(grow && Input.GetButton("Pull"))
+        if(grow)
         {
             anim.SetBool("grow",true); 
             useDialog.SetActive(false); 

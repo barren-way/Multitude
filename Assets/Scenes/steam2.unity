@@ -1216,7 +1216,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: press F to use reagent on menkey
+  m_Text: 'press F to use machine on menkey
+
+    press R to collect machine'
 --- !u!222 &463321400
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1425,7 +1427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 94.20005, y: 14.054442, z: -15}
+  m_LocalPosition: {x: 86.62014, y: 14.079703, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1502,7 +1504,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.48, y: 3.5}
+    oldSize: {x: 6.51, y: 3.61}
     newSize: {x: 6.1, y: 6.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1510,22 +1512,23 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.116115, y: 0.4723832}
-      - {x: -0.07192824, y: 0.04102122}
-      - {x: 0.19653603, y: 0.22101204}
-      - {x: 0.048072476, y: 0.39901423}
-      - {x: -0.0419297, y: 0.54500896}
-      - {x: -0.114999995, y: 0.655}
-      - {x: -0.98655224, y: 1.208951}
-      - {x: -2.3227243, y: 0.8109765}
-      - {x: -3.1535087, y: -0.17903171}
-      - {x: -3.088668, y: -0.50227374}
+    - - {x: -2.6744392, y: -1.7180201}
+      - {x: -1.6859006, y: -1.689079}
+      - {x: -1.6029456, y: -1.1598948}
+      - {x: -1.6957561, y: -0.93427444}
+      - {x: -1.7857621, y: -0.7089171}
+      - {x: -1.7660793, y: -0.29734868}
+      - {x: -1.914123, y: -0.2195723}
+      - {x: -2.712306, y: -0.4905675}
+      - {x: -2.9123356, y: -0.5758443}
+      - {x: -3.2185285, y: -1.3435153}
+      - {x: -2.7000432, y: -1.7142457}
       - {x: -2.3319516, y: -0.8629837}
       - {x: -2.037341, y: -0.91298425}
       - {x: -1.4996448, y: -1.0229747}
-      - {x: -0.9573347, y: -0.89897776}
-      - {x: -0.96040606, y: -0.63099504}
-      - {x: -1.5604162, y: 0.41297534}
+      - {x: -1.6437418, y: -1.5021324}
+      - {x: -1.7395669, y: -1.5833437}
+      - {x: -1.6346242, y: -1.1266563}
 --- !u!114 &520570362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1587,7 +1590,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6f3bf0fe7b787fc4ca09f389a561093c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2c79221140a04943a3fa3cca78b27d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1606,7 +1609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520570360}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 60.63, y: 12.32, z: 0}
+  m_LocalPosition: {x: 98.52, y: 12.85, z: 0}
   m_LocalScale: {x: 1.3438709, y: 1.5700432, z: 0.15697531}
   m_Children:
   - {fileID: 1624932111}
@@ -1853,7 +1856,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629687217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 94.2, y: 14.038, z: -15}
+  m_LocalPosition: {x: 86.62, y: 14.038, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 628814802}
@@ -10220,7 +10223,7 @@ PrefabInstance:
     - target: {fileID: 3543462228983145083, guid: bc55e072a10571a4fb2f0ce694272302,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 94.2
+      value: 86.62
       objectReference: {fileID: 0}
     - target: {fileID: 3543462228983145083, guid: bc55e072a10571a4fb2f0ce694272302,
         type: 3}

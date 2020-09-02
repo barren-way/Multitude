@@ -37,11 +37,7 @@ public class reagent : MonoBehaviour
         if( Input.GetKeyDown(KeyCode.R) && flag == true)  //收集机器
         {
              Instantiate(explosionVFXPrefab,transform.position,transform.rotation);
-             playermove.PlayOrbAudio();  
-             Catalyzer += 1;
-             CatalyzerNum.text = Catalyzer.ToString(); 
-             useDialog.SetActive(true);  
-             Monkey.GetComponent<monkey>().grow = true;
+             playermove.PlayOrbAudio();             
              Destroy(gameObject); 
         }
     }
@@ -67,10 +63,19 @@ public class reagent : MonoBehaviour
         if(RightCheck || LeftCheck)
         {
             flag = true;
+            Catalyzer += 1;
+            CatalyzerNum.text = Catalyzer.ToString(); 
+            useDialog.SetActive(true);  
         }
         else
         {
             flag = false;
+            useDialog.SetActive(false);
         }
+    }
+
+    void Aftermachine()
+    {
+        Monkey.GetComponent<monkey>().grow = true;
     }
 }
