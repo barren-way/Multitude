@@ -13,10 +13,17 @@ public class changeSenes : MonoBehaviour
     public dataSave saveData;
     static public bool senesChanging=false,afterChange=false;
     public BoolData boolSave;
+    public bool thirdSence=false;
+    public GameObject positionDialog;
 
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        levelNum=(SceneManager.GetActiveScene().buildIndex+3)/3;
+        if(levelNum>2)
+        {
+            thirdSence=true;
+        }
         /*if (SceneManager.GetActiveScene().name == "start")
         {
 
@@ -70,6 +77,15 @@ public class changeSenes : MonoBehaviour
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
                     gameObject.transform.position += new Vector3(0, changeSenseHight, 0);
                 }
+                if (SceneManager.GetActiveScene().buildIndex == levelNum * 3 - 2)
+                {
+                    
+                    if(thirdSence)
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+                        gameObject.transform.position += new Vector3(0, changeSenseHight, 0);
+                    }
+                }
                 else
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -81,8 +97,11 @@ public class changeSenes : MonoBehaviour
             {
                 if (SceneManager.GetActiveScene().buildIndex == levelNum * 3 - 3)
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-                    gameObject.transform.position += new Vector3(0, changeSenseHight, 0);
+                    if(thirdSence)
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+                        gameObject.transform.position += new Vector3(0, changeSenseHight, 0);
+                    }
                 }
                 else
                 {
@@ -110,12 +129,18 @@ public class changeSenes : MonoBehaviour
             }
 
         }
-    }
-    void reLoadObject()
-    {
         
     }
-
+    void  OnTriggerStay2D(Collider2D other)
+    {
+        if(other.tag=="thirdSence")
+        {
+            
+            if(Input.GetButton("Pull"))
+            {
+                thirdSence=true;
+            }
+        }
+    }
     
-
 }
