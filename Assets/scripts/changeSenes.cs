@@ -14,7 +14,7 @@ public class changeSenes : MonoBehaviour
     static public bool senesChanging=false,afterChange=false;
     public BoolData boolSave;
     public bool thirdSence=false;
-    public GameObject positionDialog;
+    public GameObject positionDialog,checkDialog;
 
     void Start()
     {
@@ -139,6 +139,8 @@ public class changeSenes : MonoBehaviour
             if(Input.GetButton("Pull"))
             {
                 thirdSence=true;
+                checkDialog.SetActive(false);
+                positionDialog.SetActive(true);
             }
         }
     }
