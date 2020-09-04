@@ -8,10 +8,11 @@ public class bag : MonoBehaviour
     public GameObject bags;
     public Inventory myBag;
     public bool bagOpen=true;
-    public Item thisItem;
+
     public GameObject explosionVFXPrefab;
-    public bool onSeed;
-    public GameObject seedObject;
+    public bool onSeed,onMachine;
+    public GameObject thisObject;
+    public Item machine,seed;
     void Start()
     {
         bags=GameObject.Find("bag");
@@ -32,7 +33,7 @@ public class bag : MonoBehaviour
             bags.SetActive(bagOpen);
         }
     }
-    public void AddNewItem()
+    public void AddNewItem(Item thisItem)
     {
 
         if(!myBag.itemList.Contains(thisItem))
@@ -49,7 +50,12 @@ public class bag : MonoBehaviour
         if(other.tag=="seed")
         {
             onSeed=true;
-            seedObject=other.gameObject;
+            thisObject=other.gameObject;
+        }
+        if(other.tag=="machine")
+        {
+            onMachine=true;
+            thisObject=other.gameObject;
         }
     }
 
@@ -65,11 +71,19 @@ public class bag : MonoBehaviour
     {
         if(Input.GetButton("Pull"))
         {
-            AddNewItem();
-             Instantiate(explosionVFXPrefab,transform.position,transform.rotation);
-             Destroy(seedObject);
-             changeSenes.getSword=true;
-             playermove.PlayOrbAudio();
+            if(onSeed)
+            {
+                AddNewItem(seed);
+                Instantiate(explosionVFXPrefab,transform.position,transform.rotation);
+                Destroy(thisObject);
+                playermove.PlayOrbAudio();
+            }
+            if(onMachine)
+            {
+                AddNewItem(machine);
+                
+            }
+            
         }
     }
 }

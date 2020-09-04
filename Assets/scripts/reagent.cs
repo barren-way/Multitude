@@ -10,7 +10,7 @@ public class reagent : MonoBehaviour
     public GameObject useDialog;
     public GameObject Monkey;
     public int Catalyzer;
-    public Text CatalyzerNum;
+
     private Animator anim;
     private bool flag;
 
@@ -19,25 +19,35 @@ public class reagent : MonoBehaviour
      public float CaseOffsetY = -0.4f;
      public float length = 2f;
      public LayerMask groundLayer;
+     public Inventory myBag;
+     public BoolData boolSave;
+     public Item thisItem;
+     public bool place;
+     public Collider2D lightColl;
+     public GameObject growLight;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         CreatRay();
-        if(Input.GetButton("Pull") && flag == true)   //使用机器
+        if( Input.GetKeyDown(KeyCode.R) && flag == true)   //使用机器
         {
             anim.SetBool("light",true); 
+            Destroy(useDialog);
+            place=true; 
             //useDialog.SetActive(false); 
         }
-        if( Input.GetKeyDown(KeyCode.R) && flag == true)  //收集机器
+        if( Input.GetButton("Pull")&& flag == true)  //收集机器
         {
              Instantiate(explosionVFXPrefab,transform.position,transform.rotation);
-             playermove.PlayOrbAudio();             
+             playermove.PlayOrbAudio();
+             Destroy(useDialog);             
              Destroy(gameObject); 
         }
     }
@@ -63,19 +73,35 @@ public class reagent : MonoBehaviour
         if(RightCheck || LeftCheck)
         {
             flag = true;
-            Catalyzer += 1;
-            CatalyzerNum.text = Catalyzer.ToString(); 
-            useDialog.SetActive(true);  
+            if(!place)
+            {
+                useDialog.SetActive(true);
+            }
+              
         }
         else
         {
             flag = false;
-            useDialog.SetActive(false);
+            if(!place)
+            {
+                useDialog.SetActive(false);
+            }
+
+            
         }
     }
 
     void Aftermachine()
     {
-        Monkey.GetComponent<monkey>().grow = true;
+        
+        if(!place)
+        {
+            Monkey.GetComponent<monkey>().grow = true;
+        }
+        
+    }
+    void lightOpen()
+    {
+        growLight.GetComponent<Collider2D>().enabled=true;
     }
 }

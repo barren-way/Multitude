@@ -118,7 +118,7 @@ public class playermove : MonoBehaviour
     }
     void jump()
     {
-        if(isGround)
+        if(coll.IsTouchingLayers(ground))
         {
             jumpCount=1;
             isJump=false;
@@ -130,7 +130,7 @@ public class playermove : MonoBehaviour
                 Invoke(nameof(restart),1);
             }
         }
-        if(jumpPress&&isGround)
+        if(jumpPress&&coll.IsTouchingLayers(ground))
         {
             isJump=true;
             rb.velocity=new Vector2(rb.velocity.x,jumpforce);

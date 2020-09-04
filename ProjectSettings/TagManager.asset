@@ -11,6 +11,8 @@ TagManager:
   - Box
   - seed
   - thirdSence
+  - machine
+  - light
   layers:
   - Default
   - TransparentFX

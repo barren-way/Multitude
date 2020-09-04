@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject player;
 
     public GameObject slope;
+    public GameObject machine;
 
 
 
@@ -84,24 +86,44 @@ public class InventoryManager : MonoBehaviour
             {
                 myBag.itemList.Remove(onItem);
                 RefreshItem();
-                if(slope.GetComponent<slope>().onSlope)
+                if(SceneManager.GetActiveScene().buildIndex==3)
                 {
-                    print(slope.GetComponent<slope>().onSlope);
-                    GameObject newItem = Instantiate(seeds,instance.player.transform.position,transform.rotation);
-                    newItem.GetComponent<Seed>().bread=true;
-                    newItem.transform.position=new Vector3(newItem.transform.position.x,newItem.transform.position.y-1.2f,newItem.transform.position.z);
-                    newItem.transform.rotation=Quaternion.Euler(0.0f,0.0f,-45f);
+                    if(slope.GetComponent<slope>().onSlope)
+                    {
+
+                        GameObject newItem = Instantiate(seeds,instance.player.transform.position,transform.rotation);
+                        newItem.GetComponent<Seed>().bread=true;
+                        newItem.transform.position=new Vector3(newItem.transform.position.x,newItem.transform.position.y-1.2f,newItem.transform.position.z);
+                        newItem.transform.rotation=Quaternion.Euler(0.0f,0.0f,-45f);
+                        
+                    
+                    }
+                    else
+                    {
+                        GameObject newItem = Instantiate(seeds,instance.player.transform.position,transform.rotation);
+                        newItem.GetComponent<Seed>().bread=true;
+                        newItem.transform.position=new Vector3(newItem.transform.position.x,newItem.transform.position.y-0.8f,newItem.transform.position.z);
+                    }
                 }
                 else
                 {
-                    print(slope.GetComponent<slope>().onSlope);
                     GameObject newItem = Instantiate(seeds,instance.player.transform.position,transform.rotation);
                     newItem.GetComponent<Seed>().bread=true;
                     newItem.transform.position=new Vector3(newItem.transform.position.x,newItem.transform.position.y-0.8f,newItem.transform.position.z);
-                }
-
-                
+                }   
             }
+        }
+        else if(onItem.itemName=="machine")
+        {
+            if(Input.GetKeyDown(KeyCode.K))
+            {
+                myBag.itemList.Remove(onItem);
+                RefreshItem();
+                GameObject newItem = Instantiate(machine,instance.player.transform.position,transform.rotation);
+                newItem.transform.position=new Vector3(newItem.transform.position.x+4.5f,newItem.transform.position.y+1.5f,newItem.transform.position.z);  
+                newItem.GetComponent<reagent>().place=true;             
+            }
+            
         }
     }
 

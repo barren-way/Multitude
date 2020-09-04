@@ -1052,6 +1052,7 @@ MonoBehaviour:
   frame: {fileID: 1487124028}
   player: {fileID: 0}
   slope: {fileID: 640978964}
+  machine: {fileID: 49753255765494673, guid: 11c74bdd01d706547a04d2e9499716c1, type: 3}
 --- !u!114 &597669032
 MonoBehaviour:
   m_ObjectHideFlags: 0

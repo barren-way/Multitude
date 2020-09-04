@@ -510,6 +510,9 @@ MonoBehaviour:
   box: {fileID: 0}
   saveData: {fileID: 11400000, guid: 6ca023db48fc0cf44bc8f787941fb94c, type: 2}
   boolSave: {fileID: 11400000, guid: 0b7b01eaa14d6714892004e16d512c4a, type: 2}
+  thirdSence: 0
+  positionDialog: {fileID: 0}
+  checkDialog: {fileID: 0}
 --- !u!58 &1645987593
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -557,11 +560,13 @@ MonoBehaviour:
   bags: {fileID: 0}
   myBag: {fileID: 11400000, guid: f4fa10db436c4724da9b425ebfbe7a12, type: 2}
   bagOpen: 1
-  thisItem: {fileID: 11400000, guid: 107c08fe18b9f6a498235a13f6abd87a, type: 2}
   explosionVFXPrefab: {fileID: 1305675960232650, guid: 1e4ec98ba4bb0244292ae6c0c26be7f4,
     type: 3}
   onSeed: 0
-  seedObject: {fileID: 0}
+  onMachine: 0
+  thisObject: {fileID: 0}
+  machine: {fileID: 11400000, guid: 8e4818924463a7e46969372a7087b11a, type: 2}
+  seed: {fileID: 11400000, guid: 107c08fe18b9f6a498235a13f6abd87a, type: 2}
 --- !u!1 &3543462229541720904
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +621,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3543462230533658094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.17, y: -1.23, z: 0}
+  m_LocalPosition: {x: -0.17, y: -1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3543462228983145083}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Seed : MonoBehaviour
 {
@@ -16,14 +17,18 @@ public class Seed : MonoBehaviour
     public bool grow;
     public GameObject timbo;
     public Animator anim;
+    public GameObject slope;
+
 
 
 
     void Start()
     {
         Transform[] trans=GetComponentsInChildren<Transform>();
+        slope=GameObject.Find("slope");
         timbo=trans[2].gameObject;
         anim=timbo.gameObject.GetComponent<Animator>();
+        checkScenes();
     }
 
     // Update is called once per frame
@@ -46,6 +51,11 @@ public class Seed : MonoBehaviour
         {
             pickColl.enabled=false;
             breadColl.enabled=true;
+            timbo.SetActive(true);
+        }
+        else
+        {
+            timbo.SetActive(false);
         }
     }
     public void AddNewItem()
@@ -62,12 +72,27 @@ public class Seed : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D other)
+     void OnTriggerEnter2D(Collider2D other)
+
     {
-        if(other.gameObject.tag == "Player"&&bread)
+        if(other.tag == "light"&&bread)
         {
 
             anim.SetBool("grow",true);                                  
+        }
+    }
+    void checkScenes()
+    {
+        if(SceneManager.GetActiveScene().buildIndex!=3)
+        {
+            timbo.GetComponent<Collider2D>().enabled=false;
+        }
+        else
+        {
+            if(!slope.GetComponent<slope>().onSlope)
+            {
+                timbo.GetComponent<Collider2D>().enabled=false;
+            }
         }
     }
 }

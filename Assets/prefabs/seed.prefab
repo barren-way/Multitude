@@ -123,6 +123,7 @@ MonoBehaviour:
   grow: 0
   timbo: {fileID: 0}
   anim: {fileID: 0}
+  slope: {fileID: 0}
 --- !u!58 &453351628
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -133,7 +134,7 @@ CircleCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.034023285, y: -0.44424248}
