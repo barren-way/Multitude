@@ -15475,7 +15475,7 @@ MonoBehaviour:
   frame: {fileID: 1742478165}
   player: {fileID: 0}
   slope: {fileID: 0}
-  meachine: {fileID: 49753255765494673, guid: 11c74bdd01d706547a04d2e9499716c1, type: 3}
+  machine: {fileID: 49753255765494673, guid: 11c74bdd01d706547a04d2e9499716c1, type: 3}
 --- !u!1 &689911994
 GameObject:
   m_ObjectHideFlags: 0
@@ -23879,7 +23879,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300012, guid: 6167b5d3cb29d52488e611c0cb2a074c, type: 3}
   m_Color: {r: 0.42171282, g: 0.7647059, b: 0.48084956, a: 1}
   m_FlipX: 0
@@ -37312,10 +37312,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4452344512542380444, guid: 880746aa4a029c546925fcf6004fe429,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4452344512542380445, guid: 880746aa4a029c546925fcf6004fe429,
         type: 3}
       propertyPath: m_Name
       value: seed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016951886570764437, guid: 880746aa4a029c546925fcf6004fe429,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 880746aa4a029c546925fcf6004fe429, type: 3}

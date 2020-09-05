@@ -53,7 +53,7 @@ public class Seed : MonoBehaviour
             breadColl.enabled=true;
             timbo.SetActive(true);
         }
-        else
+        else if(anim.GetBool("grow"))
         {
             timbo.SetActive(false);
         }
@@ -72,7 +72,7 @@ public class Seed : MonoBehaviour
     }
 
 
-     void OnTriggerEnter2D(Collider2D other)
+     void OnTriggerStay2D(Collider2D other)
 
     {
         if(other.tag == "light"&&bread)

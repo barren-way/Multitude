@@ -117,14 +117,39 @@ public class InventoryManager : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.K))
             {
-                myBag.itemList.Remove(onItem);
-                RefreshItem();
-                GameObject newItem = Instantiate(machine,instance.player.transform.position,transform.rotation);
-                newItem.transform.position=new Vector3(newItem.transform.position.x+4.5f,newItem.transform.position.y+1.5f,newItem.transform.position.z);  
-                newItem.GetComponent<reagent>().place=true;             
+                useMachine();           
             }
             
         }
+    }
+    void useMachine()
+    {
+        myBag.itemList.Remove(onItem);
+        RefreshItem();
+        if(SceneManager.GetActiveScene().buildIndex==3)
+        {
+            if(slope.GetComponent<slope>().onSlope)
+            {
+
+                GameObject newItem = Instantiate(machine,instance.player.transform.position,transform.rotation);
+                newItem.transform.position=new Vector3(newItem.transform.position.x+5.3f,newItem.transform.position.y-2.5f,newItem.transform.position.z);  
+                newItem.GetComponent<reagent>().place=true;
+                newItem.transform.rotation=Quaternion.Euler(0.0f,0.0f,-45f);     
+            }
+            else
+            {
+                GameObject newItem = Instantiate(machine,instance.player.transform.position,transform.rotation);
+                newItem.transform.position=new Vector3(newItem.transform.position.x+4.5f,newItem.transform.position.y+1.5f,newItem.transform.position.z);  
+                newItem.GetComponent<reagent>().place=true;
+            }
+        }
+        else
+        {
+            GameObject newItem = Instantiate(machine,instance.player.transform.position,transform.rotation);
+            newItem.transform.position=new Vector3(newItem.transform.position.x+4.5f,newItem.transform.position.y+1.5f,newItem.transform.position.z);  
+            newItem.GetComponent<reagent>().place=true;
+        }
+        
     }
 
 }
