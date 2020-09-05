@@ -40,7 +40,6 @@ public class reagent : MonoBehaviour
         {
             anim.SetBool("light",true); 
             Destroy(useDialog);
-            place=true; 
             //useDialog.SetActive(false); 
         }
         if( Input.GetButton("Pull")&& flag == true)  //收集机器
@@ -97,6 +96,7 @@ public class reagent : MonoBehaviour
         if(!place)
         {
             Monkey.GetComponent<monkey>().grow = true;
+            place=true; 
         }
         
     }
